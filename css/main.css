@@ -90,28 +90,98 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Ayoub's Custom CSS
    ========================================================================== */
 
+/*************************************
+    General Styles and helper classes
+**************************************/
+    table tr:nth-child(even) {
+        background: rgba(0,0,0,0.1);
+    }
+
+    a {
+        text-decoration: none;
+        color: #08C;
+        transition: all 0.3s ease-out;
+        position: relative;
+        padding: .5em;
+        margin: -.5em;
+    }
+     
+    a:hover { color: #0AF; }
+
+    #content-wrapper {
+        width: 1200px; 
+        margin: 0 auto;
+        padding: 20px 0;
+        border: 1px solid black;
+    }
+
+/*************************************
+    Main Section Styles
+**************************************/
+
+section#main {
+    margin: 20px;
+}
+
+.price-badge {
+    width: 115px;
+    height: 140px;
+    background: url('../img/price_badge.png') no-repeat top;
+    float: right;
+    margin-top: -40px;
+    padding-right: 40px;    
+}
+
+figure#app-image {
+    float: left;
+    width: 305px;
+    height: 508px;
+    background: url('../img/phone.jpg') no-repeat top left;
+}
 
 
+/*************************************
+        footer styles
+**************************************/
+footer {
+    border-top: 1px solid #ddd;
+    margin: 5px 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+footer p, footer li {
+    height: 20px;
+    line-height: 20px;
+}
 
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+
+.inline-list {list-style-type: none;}
+.inline-list li {float: left; margin-right: 10px;}
+.inline-list li:last-child {margin-right: 0;}
+.small-text {font-size: 0.8em;}
+
+.content {
+    font: 1em/1.4 Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+ 
+.title {
+    font: 1.7em/1.2 Baskerville, "Baskerville old face", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+ 
+.code {
+    font: 0.8em/1.6 Monaco, Mono-Space, monospace;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
 
 /*
  * Image replacement
@@ -179,37 +249,6 @@ textarea {
     visibility: hidden;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix {
-    *zoom: 1;
-}
-
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    Theses examples override the primary ('mobile first') styles.
@@ -217,7 +256,6 @@ textarea {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
